@@ -1,4 +1,4 @@
-package chatbot;
+
 
 public class So {
     public static boolean laSoNguyenTo(int num) {
