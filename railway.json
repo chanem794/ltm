@@ -7,7 +7,7 @@
           "setup": {
             "nixPkgs": ["jdk8"]
           },
-          "build": {
+          "start": {
             "nixPkgs": ["jdk8"]
           },
           "build": {
