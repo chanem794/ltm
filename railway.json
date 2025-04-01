@@ -2,10 +2,20 @@
     "$schema": "https://railway.app/railway.schema.json",
     "build": {
       "builder": "NIXPACKS",
-      "buildCommand": "javac chatbot/*.java"
-    },
-    "deploy": {
-      "startCommand": "java chatbot.chatServer",
-      "restartPolicy": "ON_FAILURE"
+      "nixpacksPlan": {
+        "providers": ["openjdk"],
+        "phases": {
+          "setup": {
+            "nixPkgs": ["jdk8"]
+          },
+          "build": {
+            "cmd": "javac chatbot/*.java"
+          }
+        }
+      },
+      "deploy": {
+        "startCommand": "java chatbot.chatServer",
+        "restartPolicy": "ON_FAILURE"
+      }
     }
   }
