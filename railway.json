@@ -3,7 +3,6 @@
     "build": {
       "builder": "NIXPACKS",
       "nixpacksPlan": {
-        "providers": ["openjdk"],
         "phases": {
           "setup": {
             "nixPkgs": ["jdk8"]
