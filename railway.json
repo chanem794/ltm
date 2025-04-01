@@ -9,12 +9,14 @@
           },
           "build": {
             "cmd": "javac chatbot/*.java"
+          },
+          "start": {
+            "cmd": "java chatbot.chatServer"
           }
         }
-      },
-      "deploy": {
-        "startCommand": "java chatbot.chatServer",
-        "restartPolicy": "ON_FAILURE"
       }
+    },
+    "deploy": {
+      "restartPolicy": "ON_FAILURE"
     }
   }
