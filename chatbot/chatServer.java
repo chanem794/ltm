@@ -8,7 +8,8 @@ import java.util.Map;
 public class chatServer {
     
     public static void main(String[] args) {
-        try (ServerSocket serverSocket = new ServerSocket(2025)) {
+        int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "2025"));
+        try (ServerSocket serverSocket = new ServerSocket(port)) {
             System.out.println("Server dang chay va cho ket noi...");
             
             
