@@ -8,6 +8,9 @@
             "nixPkgs": ["jdk8"]
           },
           "build": {
+            "nixPkgs": ["jdk8"]
+          },
+          "build": {
             "cmd": "javac chatbot/*.java"
           },
           "start": {
