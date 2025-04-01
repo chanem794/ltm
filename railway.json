@@ -7,9 +7,6 @@
           "setup": {
             "nixPkgs": ["jdk8"]
           },
-          "start": {
-            "nixPkgs": ["jdk8"]
-          },
           "build": {
             "cmd": "javac chatbot/*.java"
           },
@@ -18,8 +15,5 @@
           }
         }
       }
-    },
-    "deploy": {
-      "restartPolicy": "ON_FAILURE"
     }
   }
