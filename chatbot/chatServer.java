@@ -8,11 +8,10 @@ import java.util.Map;
 public class chatServer {
     
     public static void main(String[] args) {
-        int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "2025"));
-        try (ServerSocket serverSocket = new ServerSocket(port)) {
-            System.out.println("Server dang chay va cho ket noi...");
-            
-            
+        try {
+            int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "2025"));
+            ServerSocket serverSocket = new ServerSocket(port);
+            System.out.println("Server dang chay va cho ket noi tren port " + port + "...");
             while (true) {
                 Socket socket = serverSocket.accept();
 
