@@ -5,16 +5,16 @@
     "nixpacksPlan": {
       "phases": {
         "setup": {
-          "nixPkgs": ["jdk8"]
+          "nixPkgs": ["jdk22", "maven"]
         },
         "build": {
-          "cmd": "mkdir -p out && javac -d out com/mycompany/Server/main/Main.java com/mycompany/Server/function/*.java"
+          "cmd": "mvn clean package"
         }
       }
     }
   },
   "deploy": {
-    "startCommand": "java -cp out com.mycompany.Server.main.Main",
+    "startCommand": "java -jar target/server-1.0-SNAPSHOT.jar",
     "restartPolicy": "ON_FAILURE"
   }
 }
