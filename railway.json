@@ -8,13 +8,13 @@
           "nixPkgs": ["jdk8"]
         },
         "build": {
-          "cmd": "javac src/com/mycompany/Server/*.java"
+          "cmd": "mkdir -p out && javac -d out com/mycompany/Server/main/Main.java com/mycompany/Server/function/*.java"
         }
       }
     }
   },
   "deploy": {
-    "startCommand": "java -cp src com.mycompany.Server.main",
+    "startCommand": "java -cp out com.mycompany.Server.main.Main",
     "restartPolicy": "ON_FAILURE"
   }
 }
