@@ -98,7 +98,7 @@ public class Main extends javax.swing.JFrame {
             @Override
             public void run() {
                 try {
-                    server = new ServerSocket(5000);
+                    server = new ServerSocket(50);
                     lbStatus.setForeground(Color.GREEN);
                     Method.setTxt(txt);
                     txt.setText("Server now Starting ...\n");
