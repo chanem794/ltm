@@ -98,7 +98,8 @@ public class Main extends javax.swing.JFrame {
             @Override
             public void run() {
                 try {
-                    server = new ServerSocket(5000);
+                    int port = Integer.parseInt(System.getenv("PORT")); // lấy cổng từ Railway
+                    server = new ServerSocket(port);
                     lbStatus.setForeground(Color.GREEN);
                     Method.setTxt(txt);
                     txt.setText("Server now Starting ...\n");
